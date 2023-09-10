@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard1.css">
+</head>
+<body>
+    <div id="container">
+        <h2>Admin Dashboard</h2>
+<hr>
+<div id="form">
+    <!-- <label for="class-timings" id="label"></label>
+      Timings:
+        <select name="" id="timings" required> -->
+
+          <label for="class-timings" id="label">Class-Timings:</label>
+          <select name="class-timings" id="timings" required>
+            <option value="9-12">09:00-12:00</option>
+            <option value="1-3">01:00-03:00</option>
+            <option value="4-6">04:00-06:00</option>
+            <option value="8-10">08:00-10:00</option>
+          </select>
+   
+
+    <br>
+        <label for="schedule">Schedule:</label>
+            <select name="schedule" id="schedule" required>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+              </select>
+      
+              <br>
+              <label for="teacher-name">Teacher's Name:</label>
+              <select name="teacher-name" id="teacher" required>
+                  <option value="Miss Hina">Miss Hina</option>
+                  <option value="Miss Tayyaba">Miss Tayyaba</option>
+                  <option value="Miss Qurat-ul-ain">Miss Qurat-ul-ain</option>
+                  <option value="Miss Iqra">Miss Iqra</option>
+                </select>
+              <br>
+
+              <label for="section-name">Section Name:</label>
+          <select name="section-name" id="section" required>
+            <option value="Section A">Section A</option>
+            <option value="Section B">Section B</option>
+            <option value="Section C">Section C</option>
+            <option value="Section D">Section D</option>
+          </select>
+        <br>
+        <label for="course-name">Course Name:</label>
+        <select name="course-name" id="course" required>
+            <option value="AI">AI</option>
+            <option value="Web3">Web3</option>
+            <option value="Mern">Mern</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+          </select>
+        <br>
+        <label for="batch-number">Batch Number:</label>
+        <select name="batch-number" id="batch" required>
+            <option value="Batch6">Batch6</option>
+            <option value="Batch3">Batch3</option>
+            <option value="Batch2">Batch2</option>
+            <option value="Batch1">Batch1</option>
+          </select>
+        <br>
+
+</div>
+<div id="buttons">
+    <button id="create">Create</button>
+    <button id="read">Read</button>
+    <button id="update">Update</button>
+    <button id="delete">Delete</button>
+</div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="config.js"></script>
+    <script src="dashboard1.js"></script>
+</body>
+</html>

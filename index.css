@@ -1,0 +1,105 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap"); */
+body {
+  background: purple;
+  font-family: cursive;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.input-box {
+  padding: 5px;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+h3 {
+  color: rgb(0, 0, 0);
+  /* animation-timing-function: step-start; */
+  position: static;
+  margin-left: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.signup-button {
+  width: 120px;
+  height: 3rem;
+  padding: 8px 13px;
+  border: 4px solid rgb(0, 0, 0);
+  border-radius: 20px;
+}
+.signup-button:hover {
+  background-color: rgb(174, 148, 219);
+  cursor: pointer;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+#login-card {
+  height: 260px;
+}
+.card {
+  height: 400px;
+  width: 300px;
+  padding: 20px;
+  top: 90px;
+  border: 5px solid rgb(10, 39, 69);
+  box-sizing: content-box;
+  background-color: #fbfbfb;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+/* .custom-field{
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-top: 5px;
+} */
+
+/* .custom-field input{
+    padding: 12px;
+    width: 300px;
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1.5px solid gray;
+    outline-color: deepskyblue;
+} */
+
+/* .custom-field .placeholder{
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+} */
+
+/* .custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder{
+    top: 21px;
+    font-size: 10px;
+    color: #222;
+    padding: 5px;
+    background: white;
+} */
+
+/* .message{
+    font-size: 70px;
+    font-family: 'Ubuntu', sans-serif;
+    color: steelblue;
+} */
+
+/* .success{
+    font-size: 18px;
+    margin-top: 15px;
+    color: seagreen;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */

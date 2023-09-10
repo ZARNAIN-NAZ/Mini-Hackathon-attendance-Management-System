@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Demo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+    <link href="./index.css" rel="stylesheet" />
+</head>
+
+<body class="d-flex justify-content-center p-5">
+    <div class="card">
+        <div class="card-header">
+
+            <h3>Admin Sign Up</h3>
+        </div>
+           <input id="FirstName" class="input-box" type="text" placeholder="First Name"  required>
+           <br />
+        <input id="LastName" class="input-box" type="text" placeholder="Last Name" required>
+<br />
+        <input id="email" class="input-box" type="text" placeholder="E-mail" required />
+        <br />
+        <input id="password" class="input-box" type="password" placeholder="Password" required />
+
+        <br />
+        <div class="button">
+            <center><button type="submit" id="signUp" class="signup-button" name="signup-submit" value="Sign up">Sign
+                    up</button></center>
+            <center><button type="submit" id="Login" class="signup-button  " name="Login" value="Login">Login</button>
+                <center>
+            </center>
+            
+    
+        </div>
+        
+        </form>
+        <br>
+      
+    </div>
+    <script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js";
+import { getDatabase, set, ref } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";;
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDPI0M77vcK9X7Hb7_59uR5w06qdhdqrX4",
+  authDomain: "mini-hackathon-ed12e.firebaseapp.com",
+  projectId: "mini-hackathon-ed12e",
+  storageBucket: "mini-hackathon-ed12e.appspot.com",
+  messagingSenderId: "77524279291",
+  appId: "1:77524279291:web:80dde429145f9dec7ef55e",
+  measurementId: "G-KPTC33QP3Y"
+};
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const database = getDatabase(app);
+        const auth = getAuth();
+
+        signUp.addEventListener('click', (e) => {
+
+            let email = document.getElementById('email').value
+            let password = document.getElementById('password').value
+            let firstName = document.getElementById('FirstName').value
+            let lastName = document.getElementById('LastName').value
+
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                
+                    const user = userCredential.user;
+                   
+                    set(ref(database, 'users/' + user.uid), {
+                        FirstName: FirstName,
+                       LastName: LastName,
+                        email: email,
+
+                    })
+
+                    alert('User Created!');
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert(errorMessage);
+                });
+
+        })
+        Login.addEventListener('click', (e) => {
+          location.replace("login.html")
+        })
+    </script>
+</body>
+
+</html>

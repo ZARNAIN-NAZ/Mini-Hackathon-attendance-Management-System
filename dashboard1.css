@@ -1,0 +1,104 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background:purple;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 15px;
+}
+#container{
+    background-color: white;
+    width: 65%;
+    /* height:25rem; */
+    height: 30rem;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 4rem;
+    position: absolute;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 14rem;
+    margin-right: 40px;
+    /* margin-left: 5px; */
+    transform: translate(-50% -50%);
+
+}
+#container h2{
+    margin-top: 1rem;
+    margin-bottom:1rem ;
+    text-align: center;
+    font-size: 2rem;
+}
+#container #form{
+    padding-top: 1.5rem;
+    text-align: center;
+    height: 13rem;
+    margin: 10px;
+    margin-right: 23px;
+    /* background-color: red; */
+}
+select{
+    height: 30px;
+    width: 150px;
+    margin-bottom: 10px;
+    padding: 6px;
+    /* margin-left: 10px; */
+    /* margin-right: 40%;
+    margin-left: 4%; */
+}
+
+ #container #form label {
+    width: 70%;
+    margin:0.2rem;
+    /* background-color: red; */
+    margin-right: 40px;
+}
+label{
+    margin-right: 23px; 
+    /* background-color: blue; */
+   margin: 50px;
+text-wrap: none;
+}
+
+ 
+#container #buttons{
+height: 5rem;
+text-align: center;
+padding-top: 1rem;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+font-weight: bold;
+margin-top: 50px;
+
+}
+button:hover{
+    cursor: pointer;
+    background-color:  rgb(174, 148, 219);;
+    font-family: cursive;
+    font-weight: bold;
+}
+#container button{
+width: 8rem;
+height: 3rem;
+font-size: 1rem;
+/* margin-top: 90px; */
+/* margin-bottom: 4px; */
+border: 2px solid black;
+border-radius: 10px;
+
+color:black;
+}
+@media (max-width:610px) {
+    #container button{
+        width: 15%;
+    }
+    
+}
+@media (max-width:426px) {
+    #container button{
+        width: 20%;
+    }
+    
+}
